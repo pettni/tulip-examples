@@ -3,19 +3,29 @@ Examples of discrete synthesis using the TuLiP toolbox
 
 ## Steps to set up TuLiP to run the examples
 
-Create and activate a virtual env
+This assumes that Python 2.7 is installed on the system, and that the `virtualenv` package is installed. Create and activate a virtual environment
   
     virtualenv -p python2.7 ~/.venvs/tulip
-    source ~/.venvs/tulip/bin/activate
+    source ~/.venvs/tulip/bin/activate # run this every time you want to work on the project
+
+Make sure that `pip` is up-to-date (if required install a [fresh version](https://pip.pypa.io/en/stable/installing/)) and use it to install `tulip`, `jupyter`, `matplotlib` and `cvxopt`.
+
     pip install --upgrade pip
     pip install tulip  
     pip install jupyter matplotlib cvxopt
 
+For TuLiP plotting, [Graphviz](http://graphviz.org/download/) is required with the Python interface `pydot`. Install Graphviz using your preferred method (`sudo apt install graphviz` (Debian/Ubuntu), `brew install graphviz` (MacOS), or manually from the homepage), and install `pydot` with `pip`:
+
+    pip install pydot
+
+
 Clone this repo, browse to it, and start notebook server
   
-    git clone git@github.com:pettni/tulip-examples.git
+    git clone https://github.com/pettni/tulip-examples.git
     cd tulip-examples
     jupyter-notebook
+
+
 
 ## Easy FTS
 
